@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class backGroundMove : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+ 
+     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.position = new Vector2(transform.position.x, transform.position.y - 1 * Time.deltaTime);
+    
     }
 }

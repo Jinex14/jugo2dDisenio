@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Pj : MonoBehaviour
 {
+    public AudioSource disparo;
+
     [SerializeField] private int aux;
     private Vector2 initPos = new Vector2(0.08f, -4.06f);
     [SerializeField] private GameObject prefab;
@@ -19,6 +21,8 @@ public class Pj : MonoBehaviour
     private bool inv = false;
     private Animator anim;
     private void Awake()
+    
+
     {
         if (PlayerPrefs.GetInt("player") ==aux)
         {
@@ -48,10 +52,12 @@ public class Pj : MonoBehaviour
         timeDelay += Time.deltaTime;
         if (Input.GetMouseButtonDown(0) && timeDelay>= delay)
         {
+            
             timeDelay = 0;
             selectItem();
             itemContainer.GetChild(itemToSpawn).gameObject.SetActive(true);
             itemContainer.GetChild(itemToSpawn).transform.position = shootToSpawn.position;
+            
         }
     }
 
@@ -61,6 +67,7 @@ public class Pj : MonoBehaviour
             {
                 GameObject item = Instantiate(prefab, itemContainer.position, Quaternion.identity);
                 item.transform.parent = itemContainer;
+               
                 item.SetActive(false);
             }
     }
@@ -78,6 +85,7 @@ public class Pj : MonoBehaviour
                 if (itemContainer.GetChild(itemToSpawn).gameObject.activeSelf == false)
                 {
                     aux = false;
+                    disparo.Play();
                     break;
                 }
             }
@@ -107,6 +115,7 @@ public class Pj : MonoBehaviour
             delay = 0.25f;
         }
 
+
         if (collision.name == "vida")
         {
             collision.gameObject.SetActive(false);
@@ -125,10 +134,10 @@ public class Pj : MonoBehaviour
             StartCoroutine(timeShield());
         }
 
-        if (collision.name == "meta")
-        {
-            SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
-        }
+        //if (collision.name == "meta")
+        //{
+           // SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
+        //}
     }
 
     private IEnumerator timeShield()

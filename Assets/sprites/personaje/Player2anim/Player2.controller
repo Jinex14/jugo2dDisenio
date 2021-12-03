@@ -118,13 +118,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: State12
     m_Type: 3
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -146,7 +146,7 @@ AnimatorStateTransition:
   m_PrefabAsset: {fileID: 0}
   m_Name: 
   m_Conditions:
-  - m_ConditionMode: 3
+  - m_ConditionMode: 6
     m_ConditionEvent: State1
     m_EventTreshold: 1
   m_DstStateMachine: {fileID: 0}
@@ -205,10 +205,10 @@ AnimatorStateMachine:
     m_Position: {x: 130, y: 410, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4559348828924040212}
-    m_Position: {x: 525, y: 455.34473, z: 0}
+    m_Position: {x: 460, y: 530, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4885564921068203976}
-    m_Position: {x: 470, y: 290, z: 0}
+    m_Position: {x: 460, y: 300, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []

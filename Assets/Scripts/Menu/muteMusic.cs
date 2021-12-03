@@ -7,6 +7,7 @@ public class muteMusic : MonoBehaviour
     private AudioSource aSource;
     private bool aux = false;
     private void Awake()
+    
     {
         aSource = GetComponent<AudioSource>();
         if (PlayerPrefs.GetInt("sound") == 1)

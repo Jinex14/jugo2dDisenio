@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuButtoms : MonoBehaviour
+public class Butom_Menu : MonoBehaviour
 {
     private void OnMouseDown()
     {
-        SceneManager.LoadScene("juego", LoadSceneMode.Single);
-        Time.timeScale = 1;
+        SceneManager.LoadScene("SampleScene", LoadSceneMode.Single);
     }
 }

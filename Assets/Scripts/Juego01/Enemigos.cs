@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemigos : MonoBehaviour
 {
+    public AudioSource disparo;
     [SerializeField] private GameObject prefab;
     private int itemCopies = 5;
     public Transform itemContainer;
@@ -66,6 +67,7 @@ public class Enemigos : MonoBehaviour
                 if (itemContainer.GetChild(itemToSpawn).gameObject.activeSelf == false)
                 {
                     aux = false;
+                    disparo.Play();
                     break;
                 }
             }
