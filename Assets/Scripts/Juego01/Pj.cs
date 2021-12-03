@@ -20,10 +20,13 @@ public class Pj : MonoBehaviour
     private float delay = 0.5f;
     private bool inv = false;
     private Animator anim;
+
+
     private void Awake()
     
 
     {
+        Application.targetFrameRate = 120;
         if (PlayerPrefs.GetInt("player") ==aux)
         {
             transform.position = initPos;

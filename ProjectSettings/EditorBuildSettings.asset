@@ -15,9 +15,6 @@ EditorBuildSettings:
     path: Assets/Scenes/game_over.unity
     guid: 95d3836dfd106f7419bcbc4da2a33ebb
   - enabled: 1
-    path: Assets/Scenes/jefes.unity
-    guid: 7d7da97b67eabfd4cafd6d5cd3321fb1
-  - enabled: 1
     path: Assets/Scenes/juego.unity
     guid: 18f9bdc5dd6288343a790ebc01fe2dec
   - enabled: 1

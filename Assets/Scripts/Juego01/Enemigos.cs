@@ -12,6 +12,7 @@ public class Enemigos : MonoBehaviour
     private float timeDelay = 0;
     private bool attack = false;
     private int life = 3;
+    
     // Start is called before the first frame update
     void Start()
     {
